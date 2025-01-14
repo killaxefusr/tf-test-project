@@ -12,7 +12,7 @@ variable "ssh_pkey_file" {
  
 variable "allowed_ports" {
   type        = list(number)
-  default     = [22]
+  default     = [22, 80]
   description = "List of allowed ports for the security group"
 }
 
