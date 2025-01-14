@@ -6,7 +6,7 @@ terraform {
     }
   }
 }
-#указать в readme, что нужно настроить aws cli
+#specife in readme about aws cli requirement
 provider "aws" {
   shared_config_files      = ["/home/user/.aws/config"]
   shared_credentials_files = ["/home/user/.aws/credentials"]
