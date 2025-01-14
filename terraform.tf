@@ -39,7 +39,7 @@ resource "aws_security_group" "allow_my_ip" {
       from_port   = ingress.value
       to_port     = ingress.value
       protocol    = "tcp"
-      cidr_blocks = [chomp(data.http.my_public_ip.response_body) + "/32"]
+      cidr_blocks = [trimspace(data.http.my_public_ip.response_body) + "/32"]
     }
   }
   
