@@ -50,7 +50,7 @@ resource "aws_instance" "example_instance" {
   instance_type = var.instance_type
 
   subnet_id                   = var.subnet_id
-  security_group_ids          = [aws_security_group.allow_my_ip.id]
+  vpc_security_group_ids      = [aws_security_group.allow_my_ip.id]
   associate_public_ip_address = true
   iam_instance_profile        = var.iam_role_name
 
